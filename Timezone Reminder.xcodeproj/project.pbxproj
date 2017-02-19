@@ -7,27 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117581171E59B48A00D5B3BE /* Call+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 117581141E59B48A00D5B3BE /* Call+CoreDataClass.m */; };
+		117581181E59B48A00D5B3BE /* Call+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 117581161E59B48A00D5B3BE /* Call+CoreDataProperties.m */; };
+		117581221E59C32700D5B3BE /* APTimeZones.m in Sources */ = {isa = PBXBuildFile; fileRef = 1175811B1E59C32700D5B3BE /* APTimeZones.m */; };
+		117581231E59C32700D5B3BE /* CLLocation+APTimeZones.m in Sources */ = {isa = PBXBuildFile; fileRef = 1175811E1E59C32700D5B3BE /* CLLocation+APTimeZones.m */; };
+		117581241E59C32700D5B3BE /* CLPlacemark+APTimeZones.m in Sources */ = {isa = PBXBuildFile; fileRef = 117581201E59C32700D5B3BE /* CLPlacemark+APTimeZones.m */; };
+		117581251E59C32700D5B3BE /* timezonesDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 117581211E59C32700D5B3BE /* timezonesDB.json */; };
 		11CDAFAE1E5719F000203F55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFAD1E5719F000203F55 /* main.m */; };
 		11CDAFB11E5719F000203F55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFB01E5719F000203F55 /* AppDelegate.m */; };
-		11CDAFB41E5719F100203F55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFB31E5719F100203F55 /* ViewController.m */; };
 		11CDAFB71E5719F100203F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CDAFB51E5719F100203F55 /* Main.storyboard */; };
 		11CDAFBA1E5719F100203F55 /* Timezone_Reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFB81E5719F100203F55 /* Timezone_Reminder.xcdatamodeld */; };
 		11CDAFBC1E5719F100203F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CDAFBB1E5719F100203F55 /* Assets.xcassets */; };
 		11CDAFBF1E5719F100203F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CDAFBD1E5719F100203F55 /* LaunchScreen.storyboard */; };
+		11CDAFC81E57307C00203F55 /* CallTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFC71E57307C00203F55 /* CallTVCell.m */; };
+		11CDAFCB1E57429D00203F55 /* CallsVCr.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFCA1E57429D00203F55 /* CallsVCr.m */; };
+		11CDAFCE1E57438600203F55 /* CallVCr.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFCD1E57438600203F55 /* CallVCr.m */; };
+		11CDAFD11E57443D00203F55 /* PlaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFD01E57443D00203F55 /* PlaceVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		117581131E59B48A00D5B3BE /* Call+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataClass.h"; sourceTree = "<group>"; };
+		117581141E59B48A00D5B3BE /* Call+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Call+CoreDataClass.m"; sourceTree = "<group>"; };
+		117581151E59B48A00D5B3BE /* Call+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataProperties.h"; sourceTree = "<group>"; };
+		117581161E59B48A00D5B3BE /* Call+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Call+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1175811A1E59C32700D5B3BE /* APTimeZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTimeZones.h; sourceTree = "<group>"; };
+		1175811B1E59C32700D5B3BE /* APTimeZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APTimeZones.m; sourceTree = "<group>"; };
+		1175811D1E59C32700D5B3BE /* CLLocation+APTimeZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+APTimeZones.h"; sourceTree = "<group>"; };
+		1175811E1E59C32700D5B3BE /* CLLocation+APTimeZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+APTimeZones.m"; sourceTree = "<group>"; };
+		1175811F1E59C32700D5B3BE /* CLPlacemark+APTimeZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLPlacemark+APTimeZones.h"; sourceTree = "<group>"; };
+		117581201E59C32700D5B3BE /* CLPlacemark+APTimeZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLPlacemark+APTimeZones.m"; sourceTree = "<group>"; };
+		117581211E59C32700D5B3BE /* timezonesDB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timezonesDB.json; sourceTree = "<group>"; };
 		11CDAFA91E5719F000203F55 /* Timezone Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Timezone Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CDAFAD1E5719F000203F55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11CDAFAF1E5719F000203F55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11CDAFB01E5719F000203F55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		11CDAFB21E5719F000203F55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		11CDAFB31E5719F100203F55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11CDAFB61E5719F100203F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11CDAFB91E5719F100203F55 /* Timezone_Reminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timezone_Reminder.xcdatamodel; sourceTree = "<group>"; };
 		11CDAFBB1E5719F100203F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11CDAFBE1E5719F100203F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11CDAFC01E5719F100203F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CDAFC61E57307C00203F55 /* CallTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallTVCell.h; sourceTree = "<group>"; };
+		11CDAFC71E57307C00203F55 /* CallTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallTVCell.m; sourceTree = "<group>"; };
+		11CDAFC91E57429D00203F55 /* CallsVCr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallsVCr.h; sourceTree = "<group>"; };
+		11CDAFCA1E57429D00203F55 /* CallsVCr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallsVCr.m; sourceTree = "<group>"; };
+		11CDAFCC1E57438600203F55 /* CallVCr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallVCr.h; sourceTree = "<group>"; };
+		11CDAFCD1E57438600203F55 /* CallVCr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallVCr.m; sourceTree = "<group>"; };
+		11CDAFCF1E57443D00203F55 /* PlaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceVC.h; sourceTree = "<group>"; };
+		11CDAFD01E57443D00203F55 /* PlaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,10 +67,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117581191E59C32700D5B3BE /* APTimeZones */ = {
+			isa = PBXGroup;
+			children = (
+				1175811A1E59C32700D5B3BE /* APTimeZones.h */,
+				1175811B1E59C32700D5B3BE /* APTimeZones.m */,
+				1175811C1E59C32700D5B3BE /* Categories */,
+				117581211E59C32700D5B3BE /* timezonesDB.json */,
+			);
+			path = APTimeZones;
+			sourceTree = "<group>";
+		};
+		1175811C1E59C32700D5B3BE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1175811D1E59C32700D5B3BE /* CLLocation+APTimeZones.h */,
+				1175811E1E59C32700D5B3BE /* CLLocation+APTimeZones.m */,
+				1175811F1E59C32700D5B3BE /* CLPlacemark+APTimeZones.h */,
+				117581201E59C32700D5B3BE /* CLPlacemark+APTimeZones.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		11CDAFA01E5719F000203F55 = {
 			isa = PBXGroup;
 			children = (
 				11CDAFAB1E5719F000203F55 /* Timezone Reminder */,
+				117581191E59C32700D5B3BE /* APTimeZones */,
 				11CDAFAA1E5719F000203F55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,13 +111,17 @@
 			children = (
 				11CDAFAF1E5719F000203F55 /* AppDelegate.h */,
 				11CDAFB01E5719F000203F55 /* AppDelegate.m */,
-				11CDAFB21E5719F000203F55 /* ViewController.h */,
-				11CDAFB31E5719F100203F55 /* ViewController.m */,
+				11CDAFC91E57429D00203F55 /* CallsVCr.h */,
+				11CDAFCA1E57429D00203F55 /* CallsVCr.m */,
+				11CDAFC61E57307C00203F55 /* CallTVCell.h */,
+				11CDAFC71E57307C00203F55 /* CallTVCell.m */,
+				11CDAFCC1E57438600203F55 /* CallVCr.h */,
+				11CDAFCD1E57438600203F55 /* CallVCr.m */,
+				11CDAFCF1E57443D00203F55 /* PlaceVC.h */,
+				11CDAFD01E57443D00203F55 /* PlaceVC.m */,
 				11CDAFB51E5719F100203F55 /* Main.storyboard */,
 				11CDAFBB1E5719F100203F55 /* Assets.xcassets */,
-				11CDAFBD1E5719F100203F55 /* LaunchScreen.storyboard */,
-				11CDAFC01E5719F100203F55 /* Info.plist */,
-				11CDAFB81E5719F100203F55 /* Timezone_Reminder.xcdatamodeld */,
+				11CDAFD81E57466B00203F55 /* Model */,
 				11CDAFAC1E5719F000203F55 /* Supporting Files */,
 			);
 			path = "Timezone Reminder";
@@ -78,8 +131,23 @@
 			isa = PBXGroup;
 			children = (
 				11CDAFAD1E5719F000203F55 /* main.m */,
+				11CDAFBD1E5719F100203F55 /* LaunchScreen.storyboard */,
+				11CDAFC01E5719F100203F55 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11CDAFD81E57466B00203F55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				117581131E59B48A00D5B3BE /* Call+CoreDataClass.h */,
+				117581141E59B48A00D5B3BE /* Call+CoreDataClass.m */,
+				117581151E59B48A00D5B3BE /* Call+CoreDataProperties.h */,
+				117581161E59B48A00D5B3BE /* Call+CoreDataProperties.m */,
+				11CDAFB81E5719F100203F55 /* Timezone_Reminder.xcdatamodeld */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117581251E59C32700D5B3BE /* timezonesDB.json in Resources */,
 				11CDAFBF1E5719F100203F55 /* LaunchScreen.storyboard in Resources */,
 				11CDAFBC1E5719F100203F55 /* Assets.xcassets in Resources */,
 				11CDAFB71E5719F100203F55 /* Main.storyboard in Resources */,
@@ -153,10 +222,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11CDAFB41E5719F100203F55 /* ViewController.m in Sources */,
+				117581181E59B48A00D5B3BE /* Call+CoreDataProperties.m in Sources */,
+				11CDAFD11E57443D00203F55 /* PlaceVC.m in Sources */,
+				117581231E59C32700D5B3BE /* CLLocation+APTimeZones.m in Sources */,
+				11CDAFCE1E57438600203F55 /* CallVCr.m in Sources */,
+				11CDAFCB1E57429D00203F55 /* CallsVCr.m in Sources */,
 				11CDAFB11E5719F000203F55 /* AppDelegate.m in Sources */,
+				11CDAFC81E57307C00203F55 /* CallTVCell.m in Sources */,
 				11CDAFBA1E5719F100203F55 /* Timezone_Reminder.xcdatamodeld in Sources */,
+				117581221E59C32700D5B3BE /* APTimeZones.m in Sources */,
+				117581241E59C32700D5B3BE /* CLPlacemark+APTimeZones.m in Sources */,
 				11CDAFAE1E5719F000203F55 /* main.m in Sources */,
+				117581171E59B48A00D5B3BE /* Call+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +388,7 @@
 				11CDAFC51E5719F100203F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -321,7 +399,8 @@
 				11CDAFB91E5719F100203F55 /* Timezone_Reminder.xcdatamodel */,
 			);
 			currentVersion = 11CDAFB91E5719F100203F55 /* Timezone_Reminder.xcdatamodel */;
-			path = Timezone_Reminder.xcdatamodeld;
+			name = Timezone_Reminder.xcdatamodeld;
+			path = "Timezone Reminder/Timezone_Reminder.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

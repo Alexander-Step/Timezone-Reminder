@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlaceVC.h
 //  Timezone Reminder
 //
 //  Created by Alexander on 17.02.17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PlaceVC : UIViewController
 
 @end
-
