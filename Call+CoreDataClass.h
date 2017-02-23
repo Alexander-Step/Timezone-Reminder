@@ -2,7 +2,7 @@
 //  Call+CoreDataClass.h
 //  Timezone Reminder
 //
-//  Created by Alexander on 19.02.17.
+//  Created by Alexander on 20.02.17.
 //  Copyright © 2017 AlexanderStepanishin. All rights reserved.
 //
 

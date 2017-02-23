@@ -22,27 +22,38 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"[CallsVCr viewDidLoad:]");
     [super viewDidLoad];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     AppDelegate *delegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext* context = delegate.persistentContainer.viewContext;
+    NSManagedObjectContext* viewContext = delegate.persistentContainer.viewContext;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Call"];
+    request.predicate = nil;
     NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"userDate" ascending:YES];
     [request setSortDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
     frController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
-                                                        managedObjectContext:context
+                                                       managedObjectContext:viewContext
                                                          sectionNameKeyPath:nil
                                                                   cacheName:nil];
     frController.delegate = self;
-
+    NSError *fetchError;
+    if (![frController performFetch:&fetchError]){
+        NSLog(@"Error while fetching by frController: %@", fetchError.userInfo);
+    }
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,8 +64,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //NSLog(@"sections: %lu", [[frController sections] count]);
-    return 0;//[[frController sections] count];
+    NSInteger sections = 0;
+    NSLog(@"sections: %lu", [[frController sections] count]);
+    sections = [[frController sections] count];
+    return sections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -127,6 +140,12 @@
     if ([segue.identifier isEqualToString:@"add call"]){
         CallVCr *callVCr = (CallVCr*)[segue destinationViewController];
         callVCr.isNewCall = YES;
+        
+    } else if ([segue.identifier isEqualToString:@"show call"]) {
+        CallVCr *callVCr = (CallVCr*)[segue destinationViewController];
+        callVCr.isNewCall = NO;
+        CallTVCell *chosenCell = (CallTVCell*) sender;
+        callVCr.callToEdit = [frController objectAtIndexPath:[self.tableView indexPathForCell:chosenCell]];
     }
 }
 

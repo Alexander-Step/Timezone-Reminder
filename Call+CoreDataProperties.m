@@ -2,7 +2,7 @@
 //  Call+CoreDataProperties.m
 //  Timezone Reminder
 //
-//  Created by Alexander on 19.02.17.
+//  Created by Alexander on 20.02.17.
 //  Copyright © 2017 AlexanderStepanishin. All rights reserved.
 //
 
@@ -15,13 +15,15 @@
 }
 
 @dynamic clientDate;
-@dynamic clientStringPlace;
 @dynamic clientWeather;
 @dynamic textInfo;
 @dynamic userDate;
-@dynamic userStringPlace;
 @dynamic userWeather;
 @dynamic userSecondsFromGMT;
 @dynamic clientSecondsFromGMT;
+@dynamic userLatitude;
+@dynamic userLongitude;
+@dynamic clientLatitude;
+@dynamic clientLongitude;
 
 @end

@@ -2,7 +2,7 @@
 //  Call+CoreDataProperties.h
 //  Timezone Reminder
 //
-//  Created by Alexander on 19.02.17.
+//  Created by Alexander on 20.02.17.
 //  Copyright © 2017 AlexanderStepanishin. All rights reserved.
 //
 
@@ -16,14 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<Call *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSDate *clientDate;
-@property (nullable, nonatomic, copy) NSString *clientStringPlace;
 @property (nullable, nonatomic, copy) NSString *clientWeather;
 @property (nullable, nonatomic, copy) NSString *textInfo;
 @property (nullable, nonatomic, copy) NSDate *userDate;
-@property (nullable, nonatomic, copy) NSString *userStringPlace;
 @property (nullable, nonatomic, copy) NSString *userWeather;
-@property (nonatomic) int32_t userSecondsFromGMT;
-@property (nonatomic) int32_t clientSecondsFromGMT;
+@property (nonatomic) int64_t userSecondsFromGMT;
+@property (nonatomic) int64_t clientSecondsFromGMT;
+@property (nonatomic) double userLatitude;
+@property (nonatomic) double userLongitude;
+@property (nonatomic) double clientLatitude;
+@property (nonatomic) double clientLongitude;
 
 @end
 

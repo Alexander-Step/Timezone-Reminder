@@ -154,11 +154,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-6s-Zo2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Make a call" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-6s-Zo2">
                                 <rect key="frame" x="0.0" y="448" width="375" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -177,7 +176,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Your city (tap to change)"/>
                                 <connections>
-                                    <segue destination="RdG-bu-T7F" kind="show" identifier="your city" id="X0s-7u-Nfn"/>
+                                    <segue destination="RdG-bu-T7F" kind="show" identifier="user's city" id="yOq-n8-WGR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minsk weather description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-f4-6XJ">
@@ -209,7 +208,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Client's city (tap to change)"/>
                                 <connections>
-                                    <segue destination="RdG-bu-T7F" kind="show" identifier="client's city" id="5kX-nu-KGU"/>
+                                    <segue destination="RdG-bu-T7F" kind="show" identifier="client's city" id="hTc-oh-fke"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -223,6 +222,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="choseClientLocationButton" destination="Dev-Bw-Lyd" id="gUK-AW-LaX"/>
+                        <outlet property="choseYourLocationButton" destination="MDe-4X-Boh" id="7p1-vX-2lW"/>
                         <outlet property="infoTextView" destination="eu9-6s-Zo2" id="lLt-dh-iYO"/>
                         <outlet property="partnerDatePicker" destination="liV-D1-nNf" id="cvv-l8-Pky"/>
                         <outlet property="userDatePicker" destination="5MV-Hk-Xof" id="sj4-S1-jKK"/>
@@ -232,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="133.5832083958021"/>
         </scene>
-        <!--Place-->
+        <!--Map-->
         <scene sceneID="5ht-oB-itR">
             <objects>
-                <viewController id="RdG-bu-T7F" sceneMemberID="viewController">
+                <viewController id="RdG-bu-T7F" customClass="MapVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YmW-Jx-jGH"/>
                         <viewControllerLayoutGuide type="bottom" id="tBF-mL-oNW"/>
@@ -247,13 +248,31 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aNe-7N-fEX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HDq-TR-F6a" appends="YES" id="gz5-Lf-puZ"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Place" id="B5c-eX-k5u"/>
+                    <navigationItem key="navigationItem" title="Map" id="B5c-eX-k5u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="moJ-th-Tn9">
+                            <connections>
+                                <action selector="save:" destination="RdG-bu-T7F" id="Zin-IW-qwn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="aNe-7N-fEX" id="Pdt-Ld-l67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thK-SV-WQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HDq-TR-F6a">
+                    <connections>
+                        <action selector="tap:" destination="RdG-bu-T7F" id="ltu-GX-qyA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1770" y="134"/>
         </scene>
@@ -295,7 +314,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X0s-7u-Nfn"/>
-        <segue reference="Ty8-HB-fqf"/>
+        <segue reference="yOq-n8-WGR"/>
+        <segue reference="PR2-BD-IUa"/>
     </inferredMetricsTieBreakers>
 </document>
