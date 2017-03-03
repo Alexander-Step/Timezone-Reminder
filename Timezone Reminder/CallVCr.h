@@ -16,14 +16,24 @@
 #import "CLLocation+APTimeZones.h"
 #import "AppDelegate.h"
 #import <MapKit/MapKit.h>
-#import <Intents/Intents.h>
 #import "MapVC.h"
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import <Contacts/Contacts.h>
+#import "AFNetworking.h"
+#import "WeatherClient.h"
+#import "UIImageView+AFNetworking.h"
+#import "LocalNotificationsManager.h"
 
-@interface CallVCr : UIViewController <CLLocationManagerDelegate, UITextViewDelegate>
+@protocol WeatherClientDelegate;
+
+@interface CallVCr : UIViewController <CLLocationManagerDelegate, UITextViewDelegate, WeatherClientDelegate>
 
 @property (nonatomic) BOOL isNewCall;
 @property (nonatomic, strong) Call *callToEdit;
 @property (nonatomic, strong) CLLocation *userLocation;
 @property (nonatomic, strong) CLLocation *clientLocation;
+@property (nonatomic) BOOL userLocationUpdatedByUser;
+@property (nonatomic) BOOL clientLocationUpdatedByUser;
 
 @end

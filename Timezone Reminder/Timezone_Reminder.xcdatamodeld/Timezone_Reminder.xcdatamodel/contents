@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Call" representedClassName="Call" syncable="YES">
+        <attribute name="clientAddressString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="clientDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="clientLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="clientLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="clientSecondsFromGMT" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="clientWeather" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientWeatherIconString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="textInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userAddressString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="userLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userSecondsFromGMT" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userWeather" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userWeatherIconString" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Call" positionX="-477" positionY="-423" width="135" height="208"/>
+        <element name="Call" positionX="-477" positionY="-423" width="135" height="268"/>
     </elements>
 </model>

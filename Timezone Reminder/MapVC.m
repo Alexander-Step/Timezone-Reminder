@@ -124,18 +124,22 @@
     NSInteger countOfVCrs = vcsInNavigationController.count;
     CallVCr *callVCr = (CallVCr*) [vcsInNavigationController objectAtIndex:(countOfVCrs-2)];
     
-    //make changes to context
+    //make changes to context and get new place name
     if (self.userLocation){
         double latitude = self->userPoint.coordinate.latitude;
         double longitude = self->userPoint.coordinate.longitude;
         callVCr.callToEdit.userLatitude = latitude;
         callVCr.callToEdit.userLongitude = longitude;
+        callVCr.userLocationUpdatedByUser = YES;
+        callVCr.clientLocationUpdatedByUser = NO;
 
     } else if (self.clientLocation){
         double latitude = self->clientPoint.coordinate.latitude;
         double longitude = self->clientPoint.coordinate.longitude;
         callVCr.callToEdit.clientLatitude = latitude;
         callVCr.callToEdit.clientLongitude = longitude;
+        callVCr.clientLocationUpdatedByUser = YES;
+        callVCr.userLocationUpdatedByUser = NO;
     }
     
     //save context dismiss

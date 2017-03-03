@@ -1,9 +1,9 @@
 //
 //  Call+CoreDataClass.m
-//  Timezone Reminder
+//  
 //
-//  Created by Alexander on 20.02.17.
-//  Copyright © 2017 AlexanderStepanishin. All rights reserved.
+//  Created by Alexander on 01.03.17.
+//
 //
 
 #import "Call+CoreDataClass.h"

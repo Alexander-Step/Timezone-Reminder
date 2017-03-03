@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1133E0231E66BF2100AA21F1 /* WeatherClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133E0221E66BF2100AA21F1 /* WeatherClient.m */; };
+		1133E0341E6729B900AA21F1 /* Call+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133E0311E6729B900AA21F1 /* Call+CoreDataClass.m */; };
+		1133E0351E6729B900AA21F1 /* Call+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133E0331E6729B900AA21F1 /* Call+CoreDataProperties.m */; };
 		117581221E59C32700D5B3BE /* APTimeZones.m in Sources */ = {isa = PBXBuildFile; fileRef = 1175811B1E59C32700D5B3BE /* APTimeZones.m */; };
 		117581231E59C32700D5B3BE /* CLLocation+APTimeZones.m in Sources */ = {isa = PBXBuildFile; fileRef = 1175811E1E59C32700D5B3BE /* CLLocation+APTimeZones.m */; };
 		117581241E59C32700D5B3BE /* CLPlacemark+APTimeZones.m in Sources */ = {isa = PBXBuildFile; fileRef = 117581201E59C32700D5B3BE /* CLPlacemark+APTimeZones.m */; };
 		117581251E59C32700D5B3BE /* timezonesDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 117581211E59C32700D5B3BE /* timezonesDB.json */; };
-		1175812A1E5AF9C600D5B3BE /* Call+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 117581271E5AF9C600D5B3BE /* Call+CoreDataClass.m */; };
-		1175812B1E5AF9C600D5B3BE /* Call+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 117581291E5AF9C600D5B3BE /* Call+CoreDataProperties.m */; };
 		1175812E1E5C452A00D5B3BE /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1175812D1E5C452A00D5B3BE /* MapVC.m */; };
 		117581311E5C50FF00D5B3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117581301E5C50FF00D5B3BE /* MapKit.framework */; };
+		117581331E608C6200D5B3BE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117581321E608C6200D5B3BE /* AddressBookUI.framework */; };
+		117581351E608D2900D5B3BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117581341E608D2900D5B3BE /* CoreLocation.framework */; };
+		117581371E608DC300D5B3BE /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117581361E608DC300D5B3BE /* Contacts.framework */; };
+		11B4AE3A1E688EC30000ECBF /* LocalNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE391E688EC30000ECBF /* LocalNotificationsManager.m */; };
 		11CDAFAE1E5719F000203F55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFAD1E5719F000203F55 /* main.m */; };
 		11CDAFB11E5719F000203F55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFB01E5719F000203F55 /* AppDelegate.m */; };
 		11CDAFB71E5719F100203F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CDAFB51E5719F100203F55 /* Main.storyboard */; };
@@ -24,9 +29,16 @@
 		11CDAFC81E57307C00203F55 /* CallTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFC71E57307C00203F55 /* CallTVCell.m */; };
 		11CDAFCB1E57429D00203F55 /* CallsVCr.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFCA1E57429D00203F55 /* CallsVCr.m */; };
 		11CDAFCE1E57438600203F55 /* CallVCr.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CDAFCD1E57438600203F55 /* CallVCr.m */; };
+		7C218F538A98C4413599432B /* libPods-Timezone Reminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB59FF3F5BBA3B00875CEB6 /* libPods-Timezone Reminder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1133E0211E66BF2100AA21F1 /* WeatherClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherClient.h; sourceTree = "<group>"; };
+		1133E0221E66BF2100AA21F1 /* WeatherClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherClient.m; sourceTree = "<group>"; };
+		1133E0301E6729B900AA21F1 /* Call+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataClass.h"; sourceTree = "<group>"; };
+		1133E0311E6729B900AA21F1 /* Call+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Call+CoreDataClass.m"; sourceTree = "<group>"; };
+		1133E0321E6729B900AA21F1 /* Call+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1133E0331E6729B900AA21F1 /* Call+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Call+CoreDataProperties.m"; sourceTree = "<group>"; };
 		1175811A1E59C32700D5B3BE /* APTimeZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTimeZones.h; sourceTree = "<group>"; };
 		1175811B1E59C32700D5B3BE /* APTimeZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APTimeZones.m; sourceTree = "<group>"; };
 		1175811D1E59C32700D5B3BE /* CLLocation+APTimeZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+APTimeZones.h"; sourceTree = "<group>"; };
@@ -34,13 +46,14 @@
 		1175811F1E59C32700D5B3BE /* CLPlacemark+APTimeZones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLPlacemark+APTimeZones.h"; sourceTree = "<group>"; };
 		117581201E59C32700D5B3BE /* CLPlacemark+APTimeZones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLPlacemark+APTimeZones.m"; sourceTree = "<group>"; };
 		117581211E59C32700D5B3BE /* timezonesDB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timezonesDB.json; sourceTree = "<group>"; };
-		117581261E5AF9C600D5B3BE /* Call+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataClass.h"; sourceTree = "<group>"; };
-		117581271E5AF9C600D5B3BE /* Call+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Call+CoreDataClass.m"; sourceTree = "<group>"; };
-		117581281E5AF9C600D5B3BE /* Call+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataProperties.h"; sourceTree = "<group>"; };
-		117581291E5AF9C600D5B3BE /* Call+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Call+CoreDataProperties.m"; sourceTree = "<group>"; };
 		1175812C1E5C452A00D5B3BE /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVC.h; sourceTree = "<group>"; };
 		1175812D1E5C452A00D5B3BE /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
 		117581301E5C50FF00D5B3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		117581321E608C6200D5B3BE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		117581341E608D2900D5B3BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		117581361E608DC300D5B3BE /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		11B4AE381E688EC30000ECBF /* LocalNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotificationsManager.h; sourceTree = "<group>"; };
+		11B4AE391E688EC30000ECBF /* LocalNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationsManager.m; sourceTree = "<group>"; };
 		11CDAFA91E5719F000203F55 /* Timezone Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Timezone Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CDAFAD1E5719F000203F55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11CDAFAF1E5719F000203F55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +69,9 @@
 		11CDAFCA1E57429D00203F55 /* CallsVCr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallsVCr.m; sourceTree = "<group>"; };
 		11CDAFCC1E57438600203F55 /* CallVCr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallVCr.h; sourceTree = "<group>"; };
 		11CDAFCD1E57438600203F55 /* CallVCr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallVCr.m; sourceTree = "<group>"; };
+		3AB59FF3F5BBA3B00875CEB6 /* libPods-Timezone Reminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Timezone Reminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8B2CD133AE0DFD188C1DE3 /* Pods-Timezone Reminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timezone Reminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Timezone Reminder/Pods-Timezone Reminder.release.xcconfig"; sourceTree = "<group>"; };
+		EDC1C42B2671E4FDF279EF17 /* Pods-Timezone Reminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timezone Reminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Timezone Reminder/Pods-Timezone Reminder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +79,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117581371E608DC300D5B3BE /* Contacts.framework in Frameworks */,
+				117581351E608D2900D5B3BE /* CoreLocation.framework in Frameworks */,
+				117581331E608C6200D5B3BE /* AddressBookUI.framework in Frameworks */,
 				117581311E5C50FF00D5B3BE /* MapKit.framework in Frameworks */,
+				7C218F538A98C4413599432B /* libPods-Timezone Reminder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +115,11 @@
 		1175812F1E5C50FF00D5B3BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				117581361E608DC300D5B3BE /* Contacts.framework */,
+				117581341E608D2900D5B3BE /* CoreLocation.framework */,
+				117581321E608C6200D5B3BE /* AddressBookUI.framework */,
 				117581301E5C50FF00D5B3BE /* MapKit.framework */,
+				3AB59FF3F5BBA3B00875CEB6 /* libPods-Timezone Reminder.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +131,7 @@
 				117581191E59C32700D5B3BE /* APTimeZones */,
 				11CDAFAA1E5719F000203F55 /* Products */,
 				1175812F1E5C50FF00D5B3BE /* Frameworks */,
+				BAF430981D021B59B129B2FB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +156,10 @@
 				11CDAFCD1E57438600203F55 /* CallVCr.m */,
 				1175812C1E5C452A00D5B3BE /* MapVC.h */,
 				1175812D1E5C452A00D5B3BE /* MapVC.m */,
+				1133E0211E66BF2100AA21F1 /* WeatherClient.h */,
+				1133E0221E66BF2100AA21F1 /* WeatherClient.m */,
+				11B4AE381E688EC30000ECBF /* LocalNotificationsManager.h */,
+				11B4AE391E688EC30000ECBF /* LocalNotificationsManager.m */,
 				11CDAFB51E5719F100203F55 /* Main.storyboard */,
 				11CDAFBB1E5719F100203F55 /* Assets.xcassets */,
 				11CDAFD81E57466B00203F55 /* Model */,
@@ -152,14 +181,23 @@
 		11CDAFD81E57466B00203F55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				117581261E5AF9C600D5B3BE /* Call+CoreDataClass.h */,
-				117581271E5AF9C600D5B3BE /* Call+CoreDataClass.m */,
-				117581281E5AF9C600D5B3BE /* Call+CoreDataProperties.h */,
-				117581291E5AF9C600D5B3BE /* Call+CoreDataProperties.m */,
+				1133E0301E6729B900AA21F1 /* Call+CoreDataClass.h */,
+				1133E0311E6729B900AA21F1 /* Call+CoreDataClass.m */,
+				1133E0321E6729B900AA21F1 /* Call+CoreDataProperties.h */,
+				1133E0331E6729B900AA21F1 /* Call+CoreDataProperties.m */,
 				11CDAFB81E5719F100203F55 /* Timezone_Reminder.xcdatamodeld */,
 			);
 			name = Model;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		BAF430981D021B59B129B2FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDC1C42B2671E4FDF279EF17 /* Pods-Timezone Reminder.debug.xcconfig */,
+				CB8B2CD133AE0DFD188C1DE3 /* Pods-Timezone Reminder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11CDAFC31E5719F100203F55 /* Build configuration list for PBXNativeTarget "Timezone Reminder" */;
 			buildPhases = (
+				2D9FADAAF60DED8B40559C1C /* [CP] Check Pods Manifest.lock */,
 				11CDAFA51E5719F000203F55 /* Sources */,
 				11CDAFA61E5719F000203F55 /* Frameworks */,
 				11CDAFA71E5719F000203F55 /* Resources */,
+				5F6DE6E1915E23AEF7CB26BE /* [CP] Embed Pods Frameworks */,
+				1D6E2F69393D93AA898F6DEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,16 +270,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D6E2F69393D93AA898F6DEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Timezone Reminder/Pods-Timezone Reminder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D9FADAAF60DED8B40559C1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6DE6E1915E23AEF7CB26BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Timezone Reminder/Pods-Timezone Reminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11CDAFA51E5719F000203F55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1175812A1E5AF9C600D5B3BE /* Call+CoreDataClass.m in Sources */,
+				11B4AE3A1E688EC30000ECBF /* LocalNotificationsManager.m in Sources */,
 				117581231E59C32700D5B3BE /* CLLocation+APTimeZones.m in Sources */,
-				1175812B1E5AF9C600D5B3BE /* Call+CoreDataProperties.m in Sources */,
 				11CDAFCE1E57438600203F55 /* CallVCr.m in Sources */,
+				1133E0231E66BF2100AA21F1 /* WeatherClient.m in Sources */,
 				11CDAFCB1E57429D00203F55 /* CallsVCr.m in Sources */,
+				1133E0351E6729B900AA21F1 /* Call+CoreDataProperties.m in Sources */,
 				11CDAFB11E5719F000203F55 /* AppDelegate.m in Sources */,
 				11CDAFC81E57307C00203F55 /* CallTVCell.m in Sources */,
 				1175812E1E5C452A00D5B3BE /* MapVC.m in Sources */,
@@ -246,6 +336,7 @@
 				117581221E59C32700D5B3BE /* APTimeZones.m in Sources */,
 				117581241E59C32700D5B3BE /* CLPlacemark+APTimeZones.m in Sources */,
 				11CDAFAE1E5719F000203F55 /* main.m in Sources */,
+				1133E0341E6729B900AA21F1 /* Call+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +452,7 @@
 		};
 		11CDAFC41E5719F100203F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC1C42B2671E4FDF279EF17 /* Pods-Timezone Reminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Timezone Reminder/Info.plist";
@@ -372,6 +464,7 @@
 		};
 		11CDAFC51E5719F100203F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB8B2CD133AE0DFD188C1DE3 /* Pods-Timezone Reminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Timezone Reminder/Info.plist";

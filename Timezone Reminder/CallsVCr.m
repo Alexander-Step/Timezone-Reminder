@@ -11,8 +11,10 @@
 
 @interface CallsVCr ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 -(void) configureCell: (UITableViewCell*) cell atIndexPath: (NSIndexPath*) indexPath;
+- (IBAction)edit:(UIBarButtonItem *)sender;
+
 
 @end
 
@@ -22,11 +24,12 @@
 }
 
 - (void)viewDidLoad {
-    NSLog(@"[CallsVCr viewDidLoad:]");
+
     [super viewDidLoad];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.rowHeight = 65;
     
     AppDelegate *delegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext* viewContext = delegate.persistentContainer.viewContext;
@@ -65,7 +68,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger sections = 0;
-    NSLog(@"sections: %lu", [[frController sections] count]);
     sections = [[frController sections] count];
     return sections;
 }
@@ -73,7 +75,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[frController sections] objectAtIndex:section];
     NSInteger rows = [sectionInfo numberOfObjects];
-    NSLog(@"rows: %lu", rows);
     return rows;
 }
 
@@ -89,12 +90,53 @@
 {
     Call *call = [frController objectAtIndexPath:indexPath];
     if ([cell.reuseIdentifier isEqualToString:@"call cell"]){
-#warning make outputs look convinient
+        //create date formatter and strings for labels
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+        formatter.dateFormat = @"dd-MM-YYYY";
+        NSTimeZone *timezone = [[APTimeZones sharedInstance] timeZoneWithLocation:[[CLLocation alloc] initWithLatitude:call.userLatitude longitude:call.userLongitude]];
+        formatter.timeZone = timezone;
+        NSString *dateLabelString = [formatter stringFromDate:call.userDate];
+        formatter.dateFormat = @"HH:mm";
+        NSString *timeLabelString = [formatter stringFromDate:call.userDate];
+        
         ((CallTVCell*) cell).titleLabel.text = call.textInfo;
-        ((CallTVCell*) cell).dateLabel.text = [call.userDate description];
-        ((CallTVCell*) cell).timeLabel.text = [call.userDate description];
+        ((CallTVCell*) cell).dateLabel.text = dateLabelString;
+        ((CallTVCell*) cell).timeLabel.text = timeLabelString;
     }
-    
+}
+
+- (IBAction)edit:(UIBarButtonItem *)sender {
+
+    if (!self.tableView.isEditing){
+        [self.tableView setEditing:YES animated:YES];
+        self.editButton.title = @"Done";
+    } else {
+        [self.tableView setEditing:NO animated:YES];
+        self.editButton.title = @"✂︎";
+    }
+}
+
+#pragma mark table view delegate and data source 
+
+-(BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete){
+        Call *callToDelete = [self->frController objectAtIndexPath:indexPath];
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *viewContext = appDelegate.persistentContainer.viewContext;
+        [viewContext deleteObject:callToDelete];
+        //dont need to delete row(it will happen on frController delegate method didChangeObject:
+        NSError *error = nil;
+        if (![viewContext save:&error]) {
+            NSLog(@"error in context saving after deletion of Alarm");
+        }
+    }
 }
 
 /*

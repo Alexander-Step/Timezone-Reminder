@@ -1,9 +1,9 @@
 //
 //  Call+CoreDataProperties.m
-//  Timezone Reminder
+//  
 //
-//  Created by Alexander on 20.02.17.
-//  Copyright © 2017 AlexanderStepanishin. All rights reserved.
+//  Created by Alexander on 01.03.17.
+//
 //
 
 #import "Call+CoreDataProperties.h"
@@ -14,16 +14,20 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Call"];
 }
 
+@dynamic clientAddressString;
 @dynamic clientDate;
-@dynamic clientWeather;
-@dynamic textInfo;
-@dynamic userDate;
-@dynamic userWeather;
-@dynamic userSecondsFromGMT;
-@dynamic clientSecondsFromGMT;
-@dynamic userLatitude;
-@dynamic userLongitude;
 @dynamic clientLatitude;
 @dynamic clientLongitude;
+@dynamic clientSecondsFromGMT;
+@dynamic clientWeather;
+@dynamic textInfo;
+@dynamic userAddressString;
+@dynamic userDate;
+@dynamic userLatitude;
+@dynamic userLongitude;
+@dynamic userSecondsFromGMT;
+@dynamic userWeather;
+@dynamic userWeatherIconString;
+@dynamic clientWeatherIconString;
 
 @end
