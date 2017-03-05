@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1133143B1E6BF32C00A4A62E /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133143A1E6BF32C00A4A62E /* UIImage+resize.m */; };
 		1133E0231E66BF2100AA21F1 /* WeatherClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133E0221E66BF2100AA21F1 /* WeatherClient.m */; };
 		1133E0341E6729B900AA21F1 /* Call+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133E0311E6729B900AA21F1 /* Call+CoreDataClass.m */; };
 		1133E0351E6729B900AA21F1 /* Call+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133E0331E6729B900AA21F1 /* Call+CoreDataProperties.m */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113314391E6BF32C00A4A62E /* UIImage+resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+resize.h"; sourceTree = "<group>"; };
+		1133143A1E6BF32C00A4A62E /* UIImage+resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resize.m"; sourceTree = "<group>"; };
 		1133E0211E66BF2100AA21F1 /* WeatherClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherClient.h; sourceTree = "<group>"; };
 		1133E0221E66BF2100AA21F1 /* WeatherClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherClient.m; sourceTree = "<group>"; };
 		1133E0301E6729B900AA21F1 /* Call+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Call+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				1133E0221E66BF2100AA21F1 /* WeatherClient.m */,
 				11B4AE381E688EC30000ECBF /* LocalNotificationsManager.h */,
 				11B4AE391E688EC30000ECBF /* LocalNotificationsManager.m */,
+				113314391E6BF32C00A4A62E /* UIImage+resize.h */,
+				1133143A1E6BF32C00A4A62E /* UIImage+resize.m */,
 				11CDAFB51E5719F100203F55 /* Main.storyboard */,
 				11CDAFBB1E5719F100203F55 /* Assets.xcassets */,
 				11CDAFD81E57466B00203F55 /* Model */,
@@ -327,6 +332,7 @@
 				117581231E59C32700D5B3BE /* CLLocation+APTimeZones.m in Sources */,
 				11CDAFCE1E57438600203F55 /* CallVCr.m in Sources */,
 				1133E0231E66BF2100AA21F1 /* WeatherClient.m in Sources */,
+				1133143B1E6BF32C00A4A62E /* UIImage+resize.m in Sources */,
 				11CDAFCB1E57429D00203F55 /* CallsVCr.m in Sources */,
 				1133E0351E6729B900AA21F1 /* Call+CoreDataProperties.m in Sources */,
 				11CDAFB11E5719F000203F55 /* AppDelegate.m in Sources */,

@@ -47,6 +47,9 @@
         NSLog(@"Error while fetching by frController: %@", fetchError.userInfo);
     }
     
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -103,6 +106,8 @@
         ((CallTVCell*) cell).titleLabel.text = call.textInfo;
         ((CallTVCell*) cell).dateLabel.text = dateLabelString;
         ((CallTVCell*) cell).timeLabel.text = timeLabelString;
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Call cell"]];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 }
 

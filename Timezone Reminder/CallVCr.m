@@ -19,8 +19,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *choseClientLocationButton;
 @property (weak, nonatomic) IBOutlet UIImageView *userWeatherImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *clientWeatherImageView;
-@property (weak, nonatomic) IBOutlet UILabel *userWeatherLabel;
-@property (weak, nonatomic) IBOutlet UILabel *clientWeatherLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userDegreesbackgroundImageView;
+@property (weak, nonatomic) IBOutlet UITextField *userWeatherTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *clientDegreesbackgroundImageView;
+@property (weak, nonatomic) IBOutlet UITextField *clientWeatherTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *userDatePickerBackgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *clientDatePickerBackgroundImageView;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
@@ -34,6 +38,7 @@
 -(void) downloadWeatherForUserLocation: (CLLocation*) userLocation forCallDate: (NSDate*) callDate;
 -(void) downloadWeatherForClientLocation: (CLLocation*) clientLocation forCallDate: (NSDate*) callDate;
 -(void) back;
+-(void) setAllTheImageBackgrounds;
 
 @end
 
@@ -83,7 +88,7 @@
         self.callToEdit = [[Call alloc] initWithEntity:
                            [NSEntityDescription entityForName:@"Call" inManagedObjectContext:viewContext]
                         insertIntoManagedObjectContext:viewContext];
-        self.callToEdit.textInfo = @"Make a call";
+        self.callToEdit.textInfo = @"Call with: ";
         
         //user part
         self.callToEdit.userDate = [NSDate date];
@@ -95,7 +100,7 @@
         //silicon valley for default
         self.callToEdit.clientLatitude = 37.773972;
         self.callToEdit.clientLongitude = -122.431297;
-        self.callToEdit.clientAddressString = @"Interlocutor location.";
+        self.callToEdit.clientAddressString = @"Companion location.";
         [self calculateClientDateAccordingToUserDateAndTheirLocationsForCall: self.callToEdit];
         self.callToEdit.userWeather = @"temp.";
         self.callToEdit.clientWeather = @"temp.";
@@ -119,9 +124,8 @@
                                                                      target:self
                                                                      action:@selector(back)];
     self.navigationItem.leftBarButtonItem = backBarButton;
-    
-    
-    
+    self.userWeatherTextField.enabled = NO;
+    self.clientWeatherTextField.enabled = NO;
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -150,6 +154,31 @@
     //align text in textView
     [self.infoTextView setContentOffset:CGPointZero animated:NO];
     [self.infoTextView scrollRangeToVisible:NSMakeRange(0, 0)];
+    [self setAllTheImageBackgrounds];
+}
+
+-(void) setAllTheImageBackgrounds
+{
+    //set main view background
+    CGSize mainViewSize = self.view.frame.size;
+    UIImage *backgroundForMainView = [UIImage imageNamed:@"background"];
+    backgroundForMainView = [backgroundForMainView imageByScalingProportionallyToSize:mainViewSize];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backgroundForMainView];
+    
+    /*
+    //set datePickers background
+    self.userDatePickerBackgroundImageView.image = [UIImage imageNamed:@"background_datePicker_user"];
+    self.clientDatePickerBackgroundImageView.image = [UIImage imageNamed:@"background_datePicker_client"];
+    
+    //weather degrees background
+    self.userDegreesbackgroundImageView.image = [UIImage imageNamed:@"background_degrees_user"];
+    self.clientDegreesbackgroundImageView.image = [UIImage imageNamed:@"background_degrees_client"];
+    */
+    
+    //infoTextView background
+    UIImage *backgroundForInfoTextView = [UIImage imageNamed:@"background_textView"];
+    self.infoTextView.backgroundColor = [UIColor colorWithPatternImage:backgroundForInfoTextView];
+    
 }
 
 -(void) calculateClientDateAccordingToUserDateAndTheirLocationsForCall: (Call*) call
@@ -214,8 +243,8 @@
     self.infoTextView.text = self.callToEdit.textInfo;
     [self.choseYourLocationButton setTitle:self.callToEdit.userAddressString forState:UIControlStateNormal];
     [self.choseClientLocationButton setTitle:self.callToEdit.clientAddressString forState:UIControlStateNormal];
-    [self.userWeatherLabel setText:self.callToEdit.userWeather];
-    [self.clientWeatherLabel setText:self.callToEdit.clientWeather];
+    [self.userWeatherTextField setText:self.callToEdit.userWeather];
+    [self.clientWeatherTextField setText:self.callToEdit.clientWeather];
     [self.view setNeedsDisplay];
 }
 
@@ -340,13 +369,18 @@
 {
     //disable all responders except textView
     self.userDatePicker.enabled = NO;
+    self.userDatePickerBackgroundImageView.alpha = 0.2;
     self.partnerDatePicker.enabled = NO;
+    self.clientDatePickerBackgroundImageView.alpha = 0.2;
     self.choseYourLocationButton.enabled = NO;
     self.choseClientLocationButton.enabled = NO;
     self.userWeatherImageView.alpha = 0.2;
-    self.userWeatherLabel.alpha = 0.3;
+    self.userDegreesbackgroundImageView.alpha = 0.2;
+    self.userWeatherTextField.alpha = 0.3;
     self.clientWeatherImageView.alpha = 0.2;
-    self.clientWeatherLabel.alpha = 0.3;
+    self.clientDegreesbackgroundImageView.alpha = 0.2;
+    self.clientWeatherTextField.alpha = 0.3;
+    self.clientWeatherImageView.alpha = 0.2;
     
     //get height of keyboard from user info dictionary
     CGRect keyboardFrame = [[notification.userInfo valueForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
@@ -377,13 +411,18 @@
 {
     //enable all responders
     self.userDatePicker.enabled = YES;
+    self.userDatePickerBackgroundImageView.alpha = 1;
     self.partnerDatePicker.enabled = YES;
+    self.clientDatePickerBackgroundImageView.alpha = 1;
     self.choseYourLocationButton.enabled = YES;
     self.choseClientLocationButton.enabled = YES;
     self.userWeatherImageView.alpha = 1;
-    self.userWeatherLabel.alpha = 1;
+    self.userDegreesbackgroundImageView.alpha = 1;
+    self.userWeatherTextField.alpha = 1;
     self.clientWeatherImageView.alpha = 1;
-    self.clientWeatherLabel.alpha = 1;
+    self.clientDegreesbackgroundImageView.alpha = 1;
+    self.clientWeatherTextField.alpha = 1;
+    self.clientWeatherImageView.alpha = 1;
     
     //animate textView transition to standart position
     [self moveInfoTextViewFromRect:upperPositionTextViewFrame toRect:lowerPositionTextViewFrame];

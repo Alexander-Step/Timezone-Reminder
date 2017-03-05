@@ -24,6 +24,7 @@
 #import "WeatherClient.h"
 #import "UIImageView+AFNetworking.h"
 #import "LocalNotificationsManager.h"
+#import "UIImage+resize.h"
 
 @protocol WeatherClientDelegate;
 
